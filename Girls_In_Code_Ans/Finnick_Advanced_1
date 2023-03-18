@@ -1,0 +1,19 @@
+posts = [1, 2, 3, 4, 5]
+likes = [0, 0, 0, 0, 0]
+comments = [[], [], [], [], []]
+views = [0, 0, 0, 0, 0]
+
+while True:
+   num = int(input("What post would you like to see?"))
+   views[num] += 1
+   if input("Comment or no? y/n") == "y":
+       comments[num].append(input("Write your comment"))
+   if input("like or no? y/n") == "y":
+       likes[num] += 1
+   if input("Want to see more posts? y/n") == "n":
+       break
+
+print(posts)
+print(likes)
+print(comments)
+print(views)
