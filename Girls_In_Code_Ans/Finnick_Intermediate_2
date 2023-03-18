@@ -1,0 +1,6 @@
+from instagramy import InstagramUser as IU
+accounts = ["buzzfeedtasty, milktpapi, doobydobap"]
+ratio = []
+for i in accounts:
+ratio.append(IU(i).number_of_followers/IU(i).number_of_posts)
+print(f”{accounts(ratio.index(max(ratio)))} has the best ratio with {max(ratio)} followers per post”)
