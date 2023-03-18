@@ -1,0 +1,25 @@
+name = input("Name of restaurant?")
+Location = input("Location of restaurant")
+dish1 = input("Dish one name? ")
+while True:
+   try:
+       dish1rate = float(input("Dish one rating ?"))
+   except ValueError:
+       print("Please put number")
+   else:
+       break
+
+dish2 = input("Dish two name? ")
+while True:
+   try:
+       dish2rate = float(input("Dish one rating? "))
+   except ValueError:
+       print("Please put number")
+   else:
+       break
+
+if dish1rate + dish2rate > 12:
+   WouldIReturn = True
+   print("Would I return? Yes!")
+else:
+   print("Would I return? No!")
