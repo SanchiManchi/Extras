@@ -1,0 +1,14 @@
+# incomplete
+engagement = []
+like = []
+comment = []
+follow = []
+post = []
+with open("posts.csv", "r") as file:
+   for line in file:
+       posts, likes, num_followers, comments = line.split(",", 3)
+       engagement.append((int(likes) + int(comments))/int(num_followers))
+       like.append(likes)
+       comment.append(comments)
+       post.append(posts)
+   print(f"Engagement: {engagement.sorted()}")
