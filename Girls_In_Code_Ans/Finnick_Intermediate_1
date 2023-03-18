@@ -1,0 +1,4 @@
+from random import choice
+words = ["finnick","football","clothing", "cooking", "smthnidk","Wordss", "wwwdsjjs","jhbshs","skjhskjs","ksuhsk"]
+
+print(choice(words)[::-1])
