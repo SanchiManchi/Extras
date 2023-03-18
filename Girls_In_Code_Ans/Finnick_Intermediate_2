@@ -1,3 +1,4 @@
+# not debugged
 from instagramy import InstagramUser as IU
 accounts = ["buzzfeedtasty, milktpapi, doobydobap"]
 ratio = []
