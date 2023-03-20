@@ -1,0 +1,18 @@
+import random
+
+
+track = [["Daydreaming by Harry Styles"],
+        ["Workin Out by JID"],
+        ["Old Love by yuji"],
+        ["Eventually by Tame Impala"],
+        ["After Hours by The Weekend"],
+        ["Ghostin by Ariana Grande"],
+        ["Hey, Mickey! by Baby Tate"],
+        ["Low by SZA"],
+        ["Pink + White by Frank Ocean"],
+        ["Here With Me by d4vd"]]
+
+
+for i in range(3):
+   song = random.choice(track)
+   print(f"{track.index(song)}: {song}")
