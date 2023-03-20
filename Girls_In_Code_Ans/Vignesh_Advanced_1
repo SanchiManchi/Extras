@@ -1,0 +1,56 @@
+#counter function doesnt seem to be working!
+from collections import Counter
+songs = []
+bands = []
+genres = []
+times = []
+with open("songs.txt", "r") as file:
+   for line in file:
+       song, band, genre, time = line.rstrip().split(";", 3)
+       songs.append(song)
+       bands.append(band)
+       genres.append(genre)
+       times.append(time)
+
+
+s = Counter(songs)
+b = Counter(bands)
+g = Counter(genres)
+
+
+num = 0
+print("Top 5 songs:")
+for i in s:
+   print(i)
+   num += 1
+   if num == 5:
+       break
+
+
+num = 0
+print("Top 5 bands:")
+for i in b:
+   print(i)
+   num += 1
+   if num == 5:
+       break
+
+
+num = 0
+print("Top genre:")
+for i in g:
+   print(i)
+   num += 1
+   if num == 1:
+       break
+
+
+newtime = 0
+for i in times:
+   a, b = i.split(":")
+   tt = int(a)*60 + int(b)
+   newtime = newtime + tt
+
+
+mins = newtime%60
+print(f"Total time is: {newtime//60}:{mins}mins!")
