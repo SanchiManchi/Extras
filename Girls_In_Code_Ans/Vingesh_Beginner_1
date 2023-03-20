@@ -1,0 +1,18 @@
+Song1 = 'Murder And Crime - Sufjan Stevens'
+Song2 = 'To Let A Good Thing Die - Bruno Major'
+Song3 = 'Reach Out- Sufjan Stevens'
+Song4 = 'Home - Bruno Major'
+Song5 = 'Mystery of Love - Sufjan Stevens'
+
+
+songs = [Song1, Song2, Song3, Song4, Song5]
+queue = []
+
+
+for i in range(5):
+   for j in range(3):
+       queue.append(songs[i])
+
+
+for i in range(len(queue)):
+   print(f"{i+1}: {queue[i]}", sep="")
