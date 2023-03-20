@@ -1,0 +1,36 @@
+songs = [["above the chinese restaurant", "slow", "sad"],
+        ["love to keep me warm", "fast", "upbeat"],
+        ["let you break my heart again", "slow", "sad"],
+        ["street by street", "upbeat"], ["like the movies", "slow"],
+        ["falling behind", "fast", "sad"],
+        ["the christmas waltz", "slow", "upbeat"],
+        ["i wish you love", "fast", "sad"], ["someone new", "slow", "sad"],
+        ["james", "slow"]]
+
+
+playlist = []
+
+
+for i in range(8):
+   if "sad" in songs[i] and "slow" in songs[i]:
+       songs[i].append("2")
+   elif "slow" in songs[i]:
+       songs[i].append("1")
+   elif "sad" in songs[i]:
+       songs[i].append("1")
+   else:
+       songs[i].append("0")
+
+
+for i in range(8):
+   if "2" in songs[i]:
+       playlist.append(songs[i][0])
+for i in range(8):
+   if "1" in songs[i]:
+       playlist.append(songs[i][0])
+for i in range(8):
+   if "0" in songs[i]:
+       playlist.append(songs[i][0])
+
+
+print(playlist)
