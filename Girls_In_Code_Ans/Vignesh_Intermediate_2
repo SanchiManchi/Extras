@@ -1,0 +1,31 @@
+playlist1 = ["Solo by Future", "After Dark by Mr.Kitty", "Those Eyes by New West", "Golden Hour by JVKE",
+            "505 by Arctic Monkeys"]
+
+
+playlist2 = ["No Surprises by Radiohead", "Viva La Vida by Coldplay", "Woo by Rihanna", "Bad habit by Steve Lacy",
+            "Hope by NF"]
+
+
+playlist3 = ["Glue Song by beabadoobee", "About You by 1975", "Nonsense by Sabrina Carpenter",
+            "Bad habit by Steve Lacy", "Midnight Rain by Taylor Swift"]
+
+
+song = input("What song do you want to check? ")
+num_of_appears = 0
+
+
+for i in playlist1:
+   if song == i:
+       num_of_appears += 1
+for i in playlist2:
+   if song == i:
+       num_of_appears += 1
+for i in playlist3:
+   if song == i:
+       num_of_appears += 1
+
+
+if num_of_appears == 1:
+   print(f"The song {song} only appears in one playlist!")
+else:
+   print(f"The song {song} appears in multiple playlists")
