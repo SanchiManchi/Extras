@@ -1,0 +1,5 @@
+speed = input("Which speed? (0.75, 1.0, 1.25, 1.5, 2.0)")
+if speed in ["0.75", "1.0", "1.25", "1.5", "2.0"]:
+   print(f"Speed change successful, now playing at {speed}x speed.")
+else:
+   print("Please input valid speed!")
