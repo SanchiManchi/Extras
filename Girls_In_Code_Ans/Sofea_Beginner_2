@@ -1,0 +1,16 @@
+while True:
+   password = input("Please enter a password: ")
+   if 20 < len(password) < 8:
+       print("Password should be smaller than 20 digits and longer than 8!")
+   else:
+       print("Password has been validated.")
+       break
+
+
+while True:
+   recheck = input("Please re-input your password")
+   if recheck != password:
+       print("Not matching passwords, please input again")
+   else:
+       print("Logged in.")
+       break
