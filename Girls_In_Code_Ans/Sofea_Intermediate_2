@@ -1,0 +1,30 @@
+videos = [['painting', 'arts', 'visual'],
+         ['curry', 'wellness', 'cooking'],
+         ['schedule', 'wellness', 'study methods'],
+         ['dancing', 'arts', 'musicals'],
+         ['zumba', 'wellness', 'fitness'],
+         ['fried rice', 'wellness', 'cooking'],
+         ['workout', 'wellness', 'fitness'],
+         ['acrylics', 'arts', 'visual'],
+         ['tips', 'wellness', 'study methods'],
+         ['cardio', 'wellness', 'fitness'],
+         ['habits', 'wellness', 'study methods'],
+         ['singing', 'arts', 'musicals'],
+         ['noodles', 'wellness', 'cooking'],
+         ['marathon', 'wellness', 'fitness']]
+num = 1
+playlist = []
+for i in videos:
+   if "wellness" in i and "cooking" in i:
+       playlist.append(i)
+
+for i in videos:
+   if "wellness" in i and "cooking" not in i:
+       playlist.append(i)
+for i in videos:
+   if "wellness" not in i:
+       playlist.append(i)
+
+for i in range(14):
+   print(num, playlist[i])
+   num = num + 1
