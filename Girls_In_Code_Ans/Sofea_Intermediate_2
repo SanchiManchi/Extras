@@ -1,0 +1,5 @@
+x = "LUCLLSLLLULLLLLCLLLLLLLLULLLLLCLLULLLLLLLULLLLLLULLCLCCCLLLLLLLUULLLLLCLLLLLLLLLCLLLLLSLCLLLLLLCLLLLLLLLLLLCLLC"
+print(f"Likes, {x.count('L') - x.count('U')}")
+print(f"Comments, {x.count('C')}")
+print(f"Unlikes, {x.count('U')}")
+print(f"Shares, {x.count('S')}")
