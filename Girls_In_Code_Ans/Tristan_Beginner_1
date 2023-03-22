@@ -1,0 +1,16 @@
+drivers = {"Bob": 60, "Charlette": 30, "Billy": 38, "Niel": 40}
+
+
+print("Choose from:")
+for i in drivers:
+   print(f"{i}: takes {drivers[i]} mins.")
+while True:
+   num = input("Your choice? ")
+   if num not in ["Bob","Charlette","Billy","Niel"]:
+       print("Please input a valid driver")
+   else:
+       break
+
+
+print(f"You will arrive at 8:{drivers[num]}am")
+print("your driver is on the way!")
