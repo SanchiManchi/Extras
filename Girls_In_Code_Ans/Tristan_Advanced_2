@@ -1,0 +1,42 @@
+names = []
+cuisines = []
+with open("resteraunt.txt", "r") as file:
+   count = -1
+   for line in file:
+       count += 1
+       if count % 3 == 0:
+           names.append(line.rstrip())
+
+
+with open("resteraunt.txt", "r") as file:
+   count = 1
+   for line in file:
+       count += 1
+       if count % 3 == 0:
+           cuisines.append(line.rstrip())
+
+
+diction = {}
+
+
+for i in range(len(names)):
+   diction["r" + str(i)] = {cuisines[i]: names[i]}
+print(diction)
+
+
+def findkeys(node, kv):
+   if isinstance(node, list):
+       for i in node:
+           for x in findkeys(i, kv):
+               yield x
+   elif isinstance(node, dict):
+       if kv in node:
+           yield node[kv]
+       for j in node.values():
+           for x in findkeys(j, kv):
+               yield x
+
+
+print()
+food = input("What food do u wanna eat rn? ")
+print(list(findkeys(diction, food)))
