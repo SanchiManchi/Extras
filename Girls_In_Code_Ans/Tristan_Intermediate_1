@@ -1,0 +1,19 @@
+grab = [{"Restaurant": "Esquire Kitchen",
+        "Category": "Restaurant Food"},
+       {"Restaurant": "McDonalds", "Category": "Fast Food"},
+       {"Restaurant": "KFC", "Category": "Fast Food"},
+       {"Restaurant": "Jin Xuan Hong Kong",
+        "Category": "Restaurant Food"},
+       {"Restaurant": "Gong Cha", "Category": "Beverages"},
+       {"Restaurant": "Boost Juice", "Category": "Beverages"},
+       {"Restaurant": "Sushi Zanmai", "Category": "Restaurant Food"},
+       {"Restaurant": "Yomie's Rice X Yogurt",
+        "Category": "Beverages"}]
+
+
+food = input("What would you like to eat Tristan?")
+
+
+for i in grab:
+   if i["Category"] == food:
+   
