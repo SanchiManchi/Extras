@@ -1,0 +1,13 @@
+Drivers = [{"name": "Bob", "DriverID": "BOB123", "Start Location": "Sri Hartamas", "End Location": "Somewhere", "Distance" : "100m", "Cost" : "10rm"}]
+
+
+startloc = input("Start location?")
+endloc = input("End location?")
+distance = input("Distance travelled?")
+cost = input("Cost?")
+
+
+Drivers.append({"name": "Bob", "DriverID": "BOB123", "Start Location": startloc, "End Location": endloc, "Distance" : distance, "Cost" : cost})
+
+
+print(Drivers)
