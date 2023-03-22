@@ -1,0 +1,6 @@
+import string
+texts = "Grab driver found!", "Name : Niel Gale", "Rating = *****", "Number Plate = WDS2346", "Car Model = Toyota Corolla"
+
+
+for i in range(4):
+   print("",texts[i].center(20))
