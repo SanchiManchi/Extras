@@ -1,0 +1,13 @@
+rating = input("What rating will you give?")
+performance = input("How was it's performance?")
+bestfeature = input("What was the best feature")
+quality = input("How was the quality?")
+review = input("Review?")
+anon = input("Would you like to stay anonymous? y/n")
+if anon == "y":
+   username = "v*********8"
+else:
+   username = "valerie8588"
+
+
+print(f"{rating},{performance}{bestfeature},{quality},{review}. From {username}")
