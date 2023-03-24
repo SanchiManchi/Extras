@@ -1,0 +1,18 @@
+id = []
+names = []
+prices = []
+
+with open("shopee.txt","r") as file:
+   for line in file:
+       ID, name, price = line.rstrip().split(",")
+       id.append(ID)
+       names.append(name)
+       prices.append(price)
+
+count = 0
+
+for i in range(len(prices)):
+   if prices[i] == str(min(prices)):
+       item = names[i]
+   count += 1
+print(f"Valerie will buy {item} at {min(prices)}$ price")
