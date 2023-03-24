@@ -1,0 +1,12 @@
+Array1 =  [['Tristan', 'Hanoi', 'Book'], ['Tristan', 'Hanoi', 'HDMI'], ['Vignesh', 'Kuala Lumpur', 'Book'], ['Sofea', 'Jakarta', 'Book'], ['Finnick', 'Hanoi', 'Headphones'], ['Tristan', 'Manila', 'HDMI'], ['Charlotte', 'Manila', 'Shirt'], ['Valerie', 'Manila', 'Shirt'], ['Tristan', 'Hanoi', 'Headphones'], ['Valerie', 'Manila', 'Mouse'], ['Vignesh', 'Hanoi', 'Book'], ['Sofea', 'Taipei', 'Mama Noodles'], ['Sofea', 'Taipei', 'Mama Noodles'], ['Charlotte', 'Vientiane', 'HDMI'], ['Vignesh', 'Jakarta', 'HDMI'], ['Valerie', 'Hanoi', 'Headphones'], ['Tristan', 'Jakarta', 'Shirt'], ['Vignesh', 'Vientiane', 'Mama Noodles'], ['Vignesh', 'Kuala Lumpur', 'Book'], ['Charlotte', 'Vientiane', 'Shirt'], ['Valerie', 'Manila', 'Book'], ['Finnick', 'Manila', 'Headphones'], ['Finnick', 'Manila', 'Shirt']]
+
+
+postcodes = [["Bangkok", "10110"], ["Kuala Lumpur", "43200"], ["Manila", "1000"], ["Taipei", "100019"],  ["Jakarta", "10120"], ["Hanoi", "11109"],  ["Vientiane", "0604"]]
+
+
+for i in range(len(Array1)):
+   if "Valerie" in Array1[i] and "Headphones" in Array1[i]:
+       location = Array1[i][1]
+       for i in range(len(postcodes)):
+           if location == postcodes[i][0]:
+               print(f”Her headphones are in {location} at {postcodes[i][1]})
