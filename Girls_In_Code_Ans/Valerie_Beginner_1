@@ -18,3 +18,13 @@ for i in range(3):
        print("That is not one the available items")
    else:
        total = total + locals()[item]
+       print(total)
+
+x = input("What discount? 20% (1), 10RM off (2), 50% off (Only above 150RM) (3)")
+if x == "1":
+   total = total * 0.8
+elif x == "2":
+   total = total - 10
+elif x == "3" and total > 149:
+   total = total * 0.5
+print("New price:", total)
