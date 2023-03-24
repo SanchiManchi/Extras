@@ -1,0 +1,20 @@
+Shoes = 10
+Phone = 20
+Suitcase = 30
+Earphones = 10
+TShirt = 15
+Sunscreen = 10
+Microwave = 50
+BathTowel = 20
+Socks = 100
+DriedFruit = 30
+
+
+items = ["Shoes", "Phone", "Suitcase", "Earphones", "TShirt", "Sunscreen", "Microwave", 'BathTowel', "Socks", "DriedFruit"]
+total = 0
+for i in range(3):
+   item = input("What item would you like?")
+   if item not in items:
+       print("That is not one the available items")
+   else:
+       total = total + locals()[item]
