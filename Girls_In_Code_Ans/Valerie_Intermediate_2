@@ -1,0 +1,19 @@
+list = [4, 9, 2, 1, 2, 6, 3]
+
+
+MaxIndex = len(list)
+
+
+Num = MaxIndex - 1
+
+
+for i in range(MaxIndex - 1):
+ for j in range(Num):
+   if list[j] > list[j+1]:
+     Temp = list[j]
+     list[j] = list[j+1]
+     list[j+1] = Temp
+ Num = Num - 1
+
+
+print(list)
