@@ -1,0 +1,4 @@
+movies = []
+for i in range(5):
+   movies.append(input("What movie have you watched already?"))
+   print(movies)
