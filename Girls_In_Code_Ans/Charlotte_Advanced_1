@@ -1,0 +1,30 @@
+import random
+My_list = [{"Movie": "The Incantation", "Duration":2},
+          {"Movie":"The Invitation", "Duration": 2},
+          {"Movie":"The School for good and evil", "Duration": 2},
+          {"Movie":"Spirited Away", "Duration": 2},
+          {"Movie":"Your Name", "Duration": 2},
+          {"Movie":"Enola Holmes", "Duration": 2},
+          {"Movie":"A Silent Voice", "Duration": 2},
+          {"Movie":"The Tale of Princess Kaguya", "Duration": 2},
+          {"Movie":"Corpse Bride", "Duration": 1},
+          {"Movie":"Pitch Perfect 2", "Duration": 2}]
+
+playlist = []
+
+def playlistmaker():
+   total = 0
+   time = int(input("Do you want a 6 or 24hr marathon?"))
+   for i in My_list:
+       random.shuffle(My_list)
+       total = total + i["Duration"]
+       if total == time:
+           playlist.append(i["Movie"])
+           return playlist
+       elif total < time:
+           playlist.append(i["Movie"])
+       elif total > time:
+           playlist.pop()
+
+playlistmaker()
+print(playlist)
