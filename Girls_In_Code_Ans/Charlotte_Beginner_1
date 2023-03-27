@@ -1,0 +1,27 @@
+horses = [["horse1", "5/5", "4+"],
+         ["horse2", "4/5", "5+"],
+         ["horse3", "3/5", "6+"],
+         ["horse4", "2/5", "7+"],
+         ["horse5", "1/5", "8+"],
+         ["horse6", "5/5", "9+"],
+         ["horse7", "4/5", "10+"],
+         ["horse8", "3/5", "11+"],
+         ["horse9", "2/5", "24+"],
+         ["horse0", "2/5", "99+"]]
+watchlater = []
+num = 1
+for i in range(0, 9, 2):
+   print(f"{num}.{horses[i][0]}, {num+1}. {horses[i + 1][0]}")
+   num += 2
+
+def deets():
+   for i in range(3):
+       x = int(input("Which horse movie do you want detail for? Please choose the index"))
+       print(horses[x][0], horses[x][1], horses[x][2])
+
+deets()
+
+for i in range(2):
+   y = int(input("Which movies do you want to watch later? Please choose the index"))
+   watchlater.append(horses[y][0])
+print(watchlater)
