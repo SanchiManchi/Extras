@@ -1,0 +1,4 @@
+with open("movies.txt","r") as file:
+   for line in file:
+       if line.__contains__("Space") or line.__contains__("space"):
+           print(line)
