@@ -1,0 +1,10 @@
+import random
+movies = []
+def surprise_me():
+   with open("movies.txt","r") as file:
+       for line in file:
+           movies.append(line)
+   print(random.choice(movies))
+
+
+surprise_me()
