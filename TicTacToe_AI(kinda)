@@ -1,0 +1,83 @@
+import random
+
+board = [' ' for x in range(9)]
+
+
+def print_board():
+    row1 = '|{}|{}|{}|'.format(board[0], board[1], board[2])
+    row2 = '|{}|{}|{}|'.format(board[3], board[4], board[5])
+    row3 = '|{}|{}|{}|'.format(board[6], board[7], board[8])
+    print()
+    print(row1)
+    print(row2)
+    print(row3)
+    print()
+
+
+def choose_random_move():
+    moves = []
+    for i in range(len(board)):
+        if board[i] == ' ':
+            moves.append(i)
+    if len(moves) != 0:
+        return random.choice(moves)
+    else:
+        return None
+
+
+def best_ai_move():
+    for i in range(len(board)):
+        if board[i] == ' ':
+            board[i] = 'O'
+            if check_win('O'):
+                return
+            else:
+                board[i] = ' '
+    for i in range(len(board)):
+        if board[i] == ' ':
+            board[i] = 'X'
+            if check_win('X'):
+                board[i] = 'O'
+                return
+            else:
+                board[i] = ' '
+    # Choose the center if it's available
+    if board[4] == ' ':
+        board[4] = 'O'
+        return
+    # Choose a random move
+    move = choose_random_move()
+    board[move] = 'O'
+
+
+def check_win(player):
+    for i in range(0, 9, 3):
+        if board[i] == player and board[i + 1] == player and board[i + 2] == player:
+            return True
+    for i in range(3):
+        if board[i] == player and board[i + 3] == player and board[i + 6] == player:
+            return True
+    if board[0] == player and board[4] == player and board[8] == player:
+        return True
+    if board[2] == player and board[4] == player and board[6] == player:
+        return True
+    return False
+
+
+while True:
+    print_board()
+    player_move = input("Enter a position to place 'X' (1-9): ")
+    player_move = int(player_move) - 1
+    if board[player_move] == ' ':
+        board[player_move] = 'X'
+        if check_win('X'):
+            print_board()
+            print("Congratulations! You won! :)")
+            break
+        best_ai_move()
+        if check_win('O'):
+            print_board()
+            print("Sorry! You lost :(")
+            break
+    else:
+        print("That spot is already taken! Try again.")
