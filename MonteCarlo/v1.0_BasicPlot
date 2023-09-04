@@ -1,0 +1,34 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+perc = 10
+rate = 1 + perc / 100
+std = 0.2
+PVS = []
+
+for i in range(50000):
+    Revenue = []
+    CapX = []
+    CapO = []
+    FCF = []
+    DCF = []
+
+    with open("data.txt", "r") as file:
+        for line in file:
+            Rev, X, O = line.split(",", maxsplit=2)
+            Revenue.append(np.random.normal(float(Rev), std))
+            CapX.append(np.random.normal(float(X), std))
+            CapO.append(np.random.normal(float(O.rstrip()), std))
+
+    Revenue.append(round(Revenue[-1] / (rate - 1), 2))
+    CapX.append(0)
+    CapO.append(round(CapO[-1] / (rate - 1), 2))
+
+    for _ in range(len(Revenue)):
+        FCF.append(Revenue[i] - CapX[i] - CapO[i])
+        DCF.append(round(FCF[i] / (rate ** i), 2))
+
+    PVS.append(round(sum(DCF), 2))
+
+plt.hist(PVS, bins=100)
+plt.show()
