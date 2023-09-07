@@ -1,6 +1,9 @@
 import pygame
 import sys
+
 from Const import *
+from game import Game
+
 
 
 class Main:
@@ -8,9 +11,11 @@ class Main:
         pygame.init()
         self.screen = pygame.display.set_mode((Width, Height))
         pygame.display.set_caption("CHESS AI")
+        self.game = Game()
 
     def mainloop(self):
         while True:
+            self.game.bg(self.screen)
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
